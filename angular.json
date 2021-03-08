@@ -1,0 +1,51 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "annihilation": {
+      "projectType": "library",
+      "root": "projects/annihilation",
+      "sourceRoot": "projects/annihilation/src",
+      "prefix": "ni",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/annihilation/tsconfig.lib.json",
+            "project": "projects/annihilation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/annihilation/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/annihilation/src/test.ts",
+            "tsConfig": "projects/annihilation/tsconfig.spec.json",
+            "karmaConfig": "projects/annihilation/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/annihilation/tsconfig.lib.json",
+              "projects/annihilation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "annihilation"
+}
