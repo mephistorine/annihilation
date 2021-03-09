@@ -29,6 +29,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## TODO
 
 - Columns
-  - [] sorts
-  - [] filters
-  - [] enable/disable
+  - [ ] Sorts
+  - [ ] Filters
+  - [ ] Show/Hide
+  - [ ] Resize
+  - [ ] Reorder
+- [ ] Virtual scrolling
+- [ ] Inline edit
+- [ ] Row details
+- [ ] Adaptive and Responsive
+- [ ] Pages
+- [ ] Row selection
+- [ ] Cell template definition
+- [ ] Row summary
