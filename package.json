@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006 --ci",
+    "storybook:dd": "start-storybook -p 6006 --ci",
     "build-storybook": "npm run docs:json && build-storybook"
   },
   "private": true,

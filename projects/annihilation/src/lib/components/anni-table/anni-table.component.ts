@@ -1,14 +1,19 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'ni-anni-table',
+  selector: 'ni-table',
   templateUrl: './anni-table.component.html',
-  styleUrls: ['./anni-table.component.css'],
+  styleUrls: [ './anni-table.component.css' ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnniTableComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  public hello: string | undefined
+
+  constructor() {
+    console.log('hi')
+  }
 
   ngOnInit(): void {
   }
