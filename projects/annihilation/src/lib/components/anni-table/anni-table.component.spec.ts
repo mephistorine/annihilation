@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AnnihilationComponent } from './annihilation.component';
+import { AnniTableComponent } from './anni-table.component';
 
-describe('AnnihilationComponent', () => {
-  let component: AnnihilationComponent;
-  let fixture: ComponentFixture<AnnihilationComponent>;
+describe('AnniTableComponent', () => {
+  let component: AnniTableComponent;
+  let fixture: ComponentFixture<AnniTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnnihilationComponent ]
+      declarations: [ AnniTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AnnihilationComponent);
+    fixture = TestBed.createComponent(AnniTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

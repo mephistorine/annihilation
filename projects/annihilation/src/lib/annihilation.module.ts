@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
-import { AnnihilationComponent } from './annihilation.component';
-
+import { NgModule } from '@angular/core'
+import { AnniTableComponent } from './components/anni-table/anni-table.component'
 
 
 @NgModule({
-  declarations: [AnnihilationComponent],
-  imports: [
-  ],
-  exports: [AnnihilationComponent]
+  declarations: [ AnniTableComponent ],
+  imports: [],
+  exports: []
 })
-export class AnnihilationModule { }
+export class AnnihilationModule {
+}
