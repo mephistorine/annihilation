@@ -28,17 +28,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO
 
-- Columns
+- [ ] Columns
   - [ ] Sorts
   - [ ] Filters
   - [ ] Show/Hide
   - [ ] Resize
   - [ ] Reorder
-- [ ] Virtual scrolling
-- [ ] Inline edit
+- [ ] Virtual scroll (with dynamic height)
+- [ ] Edit in place (EIP)
 - [ ] Row details
 - [ ] Adaptive and Responsive
-- [ ] Pages
+- [ ] Pagination
 - [ ] Row selection
 - [ ] Cell template definition
 - [ ] Row summary
+- [ ] Partial loading while scrolling
+- [ ] Links to other tables in cells
+- [ ] Row id '#' links
