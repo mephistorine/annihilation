@@ -6,6 +6,6 @@ import { ImplicitContext } from '../../interfeces'
 })
 export class CellDefDirective<T> {
 
-  constructor(public template: TemplateRef<ImplicitContext<T>>) { }
+  constructor(public templateRef: TemplateRef<ImplicitContext<T>>) { }
 
 }

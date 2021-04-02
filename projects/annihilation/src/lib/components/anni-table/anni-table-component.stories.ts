@@ -18,10 +18,12 @@ const Template: Story<AnniTableComponent<any>> = (args: AnniTableComponent<any>)
   },
   template: `<ni-table [rows]="rows" [columns]="columns" [isWrapCells]="isWrapCells">
     <ng-container niColumnDef="id">
-      <ng-container *niHeaderCellDef>
+      <ng-template niHeaderCellDef>
         <th class="table-cell">ID</th>
-      </ng-container>
-      <ng-container *niCellDef>hello</ng-container>
+      </ng-template>
+      <ng-template niCellDef let-row let-key="key">
+        <td class="table-cell">{{ row[ key ] }}</td>
+      </ng-template>
     </ng-container>
   </ni-table>`
 })

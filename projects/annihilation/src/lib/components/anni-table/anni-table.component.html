@@ -1,27 +1,28 @@
 <table class="table-container" [class.is-wrap-cells]="isWrapCells">
-  <thead class="table-header" *ngIf="(tableHeaders | async) as heads">
+  <thead class="table-header" *ngIf="(tableHeaders | async) as tableHeadersTemplates">
     <tr class="table-row">
-<!--
-      <th *ngFor="let key of columns" class="table-cell">
-        <ng-container
-          *ngTemplateOutlet="heads[key]?.template || simpleHead; context: { $implicit: key }"
-        ></ng-container>
-      </th>
--->
       <ng-container
-        *ngFor="let key of columns"
-        [ngTemplateOutlet]="(heads[key]?.templateRef || simpleHead) | debug"
-        [ngTemplateOutletContext]="{ $implicit: key }"
+        *ngFor="let key of columns; index as i"
+        [ngTemplateOutlet]="(tableHeadersTemplates[key]?.templateRef || simpleTr) | debug"
+        [ngTemplateOutletContext]="{ $implicit: key, index: i }"
       ></ng-container>
     </tr>
   </thead>
-  <tbody class="table-body">
+  <tbody class="table-body" *ngIf="(tableCells | async) as tableCellsTemplates">
     <tr *ngFor="let row of rows" class="table-row">
-      <td *ngFor="let key of columns" class="table-cell">{{ row[ key ] }}</td>
+      <ng-container
+        *ngFor="let key of columns; index as i"
+        [ngTemplateOutlet]="tableCellsTemplates[ key ]?.templateRef || simpleTd"
+        [ngTemplateOutletContext]="{ $implicit: row, key: key, index: i }"
+      ></ng-container>
     </tr>
   </tbody>
 </table>
 
-<ng-template #simpleHead let-columnName>
+<ng-template #simpleTr let-columnName>
   <th class="table-cell">{{ columnName }}</th>
+</ng-template>
+
+<ng-template #simpleTd let-row let-key="key">
+  <td class="table-cell">{{ row[key] }}</td>
 </ng-template>
