@@ -1,1 +1,27 @@
-<p>anni-table works! {{ hello }}</p>
+<table class="table-container" [class.is-wrap-cells]="isWrapCells">
+  <thead class="table-header" *ngIf="(tableHeaders | async) as heads">
+    <tr class="table-row">
+<!--
+      <th *ngFor="let key of columns" class="table-cell">
+        <ng-container
+          *ngTemplateOutlet="heads[key]?.template || simpleHead; context: { $implicit: key }"
+        ></ng-container>
+      </th>
+-->
+      <ng-container
+        *ngFor="let key of columns"
+        [ngTemplateOutlet]="(heads[key]?.templateRef || simpleHead) | debug"
+        [ngTemplateOutletContext]="{ $implicit: key }"
+      ></ng-container>
+    </tr>
+  </thead>
+  <tbody class="table-body">
+    <tr *ngFor="let row of rows" class="table-row">
+      <td *ngFor="let key of columns" class="table-cell">{{ row[ key ] }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #simpleHead let-columnName>
+  <th class="table-cell">{{ columnName }}</th>
+</ng-template>
