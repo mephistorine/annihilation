@@ -24,14 +24,6 @@
             }
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/annihilation/src/test.ts",
-            "tsConfig": "projects/annihilation/tsconfig.spec.json",
-            "karmaConfig": "projects/annihilation/karma.conf.js"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

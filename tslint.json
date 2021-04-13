@@ -50,7 +50,8 @@
       "info",
       "time",
       "timeEnd",
-      "trace"
+      "trace",
+      "clear"
     ],
     "no-default-export": false,
     "no-duplicate-case": false,

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ContentChildren, Input, QueryList, ViewEncapsulation } from '@angular/core'
+import { ChangeDetectionStrategy, Component, ContentChildren, Input, QueryList } from '@angular/core'
 import { ColumnDefDirective } from '../../directives/column-def/column-def.directive'
 import { takeEmptyQueryList } from '../../constants'
 import { map, startWith } from 'rxjs/operators'
@@ -10,8 +10,7 @@ import { CellDefDirective } from '../../directives/cell-def/cell-def.directive'
   selector: 'ni-table',
   templateUrl: './anni-table.component.html',
   styleUrls: [ './anni-table.component.css' ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnniTableComponent<T> {
 
@@ -60,6 +59,7 @@ export class AnniTableComponent<T> {
   ))
 
   constructor() {
+    console.clear()
   }
 
 }

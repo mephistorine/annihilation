@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { AnniTableComponent } from './anni-table.component';
+import { AnniTableComponent } from './anni-table.component'
 
 describe('AnniTableComponent', () => {
-  let component: AnniTableComponent;
-  let fixture: ComponentFixture<AnniTableComponent>;
+  let component: AnniTableComponent
+  let fixture: ComponentFixture<AnniTableComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AnniTableComponent ]
     })
-    .compileComponents();
-  });
+                 .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AnniTableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(AnniTableComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

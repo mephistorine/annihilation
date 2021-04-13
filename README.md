@@ -40,8 +40,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [ ] Adaptive and Responsive
 - [ ] Pagination
 - [ ] Row selection
-- [ ] Cell template definition
+- [x] Cell template definition
 - [ ] Row summary
 - [ ] Partial loading while scrolling
 - [ ] Links to other tables in cells
 - [ ] Row id '#' links
+- [ ] Examples
+  - [ ] Localization
